@@ -1,0 +1,129 @@
+
+%
+%		COMPILE WITH XELATEX!!!!!!!
+%		Options > Configure TeXstudio... > Build > Default Compiler  <XeLaTeX>
+%
+\documentclass{article}
+
+%	FONT
+\usepackage{fontspec}
+\usepackage[fontsize=12pt]{fontsize}
+\usepackage{xcolor}
+\usepackage{hyperref}	%	LINKS
+
+%	IMAGE
+\usepackage{graphicx} \graphicspath{ {./} } 
+\usepackage[export]{adjustbox}
+
+%	ENCODING
+\usepackage[utf8]{inputenc}
+\usepackage[bulgarian]{babel}
+
+%	GEOMETRY
+\usepackage[a4paper, hmargin={2cm, .6in}, height=10in, top=1.25cm]{geometry}
+
+%	TITLE MODIFICATION
+\usepackage{titlesec}
+\usepackage{titling}
+
+%	LOREM IMPSUM
+\usepackage{blindtext}
+
+
+
+
+
+%TEST
+\usepackage{tabularx, multirow}
+
+
+%	MAKETITLE
+\renewcommand{\maketitle}{
+	\begin{center}
+	{ \huge\bfseries\theauthor }
+		\vspace{.35em}	
+	\end{center}
+	
+}
+
+
+\usepackage{array}
+
+%	TEMPLATES
+\titleformat{\section}
+{\huge\bfseries}
+{}
+{0em}
+{\\}[\titlerule]
+
+\titleformat{\subsection}
+{\bfseries\large}
+{$\arrowvert$ }
+{0em}
+{}
+
+\titleformat{\subsubsection}
+{\it\normalsize}
+{}
+{0em}
+{}
+
+
+
+
+%	MAIN ENTRY
+\begin{document}
+	
+\title{Curriculum Vitae}
+\author{AUTHOR}
+
+%\maketitle
+
+
+
+
+\cleardoublepage
+\thispagestyle{empty}
+\bgroup
+\renewcommand{\tabularxcolumn}[1]{m{#1}}
+\noindent
+\begin{tabularx}{\textwidth}{@{}c@{}X}
+	% PLACE YOUR IMAGE HERE
+	%\includegraphics[width=1.5in, valign=c]{
+		% PLACE PATH HERE
+	%} & \centering
+	\begin{tabular}[b]{@{}l@{}}
+	
+		\LARGErrr YOUR NAME \\[0.1in]
+		\href{https://LOCATION-URL}{SPECIFIC, LOCATION}\\
+		\href{tel:+PHONENUMBER}{YOUR NUMBER}\\
+		\href{mailto:EMAIL}{EXAMPLE@ASDF.COM}\\
+		\href{}{LINK1}\\
+		\href{}{LINK2}
+		
+	\end{tabular}
+\end{tabularx}
+\egroup
+
+%	INTRODUCTION
+
+%\section {Career objective}
+%\begin{description}
+	%\item[] 
+	
+%\end{description}
+
+
+
+
+\section {SECTION}
+\subsection{SUBSECTION}
+\subsubsection{SUBSUBSECTION}
+
+%\begin{description} ... \end{description}
+
+		
+	\blindtext[8]
+
+
+\end{document}
